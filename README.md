@@ -1,5 +1,5 @@
 # ABOUT
-This webcrawler was an assigned project for COMPSCI 121 Information Retrieval @ University of California Irvine and this repo is a slightly more cleaned up version of my original group's repo (https://github.com/invulnarable27/121SC, https://github.com/invulnarable27/CS121_InvertedIndex) 
+This webcrawler was an assigned class project and this repo is a slightly more cleaned up version of my original group's repo (https://github.com/invulnarable27/121SC, https://github.com/invulnarable27/CS121_InvertedIndex) 
 
 The webcrawler crawls a static corpus of the UCI domains. It parses the contents of a website, and creates an index of the words before moving onto a linked page.
 
@@ -14,3 +14,11 @@ The DEV folder is then read by hybridIndexer.py which builds the partial indexes
 First it creates folders 0-9, a-z to allow for faster retrieval of the tokens. Then it parses the JSON DEV folder to build index.txt which stores the word and its doc location. After building the index, it merges the duplicates and stores the tokens inside one of the partial indexes.
 
 Once the tokens are separated by their first letter, tfidfIndexer.py is called to add weight to the tokens. Then main.py under the websites folder can be run to generate a UI to search for terms.
+
+# My Contributions:
+
+* Increased accuracy by implementing hybrid indexer using porter stemming and lemmatization.
+
+* Trouble shooted the program and corrected key issues such as tokens failing to to update in partial index.
+
+* Responsible for ensuring crawler stayed in the allowed domains and tweaked RobotParser to access the professor's static corpus and not the actual sites.
